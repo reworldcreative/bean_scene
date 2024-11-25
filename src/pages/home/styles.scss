@@ -1,0 +1,48 @@
+@import '@/styles/index';
+@import '@/styles/widgets/header';
+
+.hero {
+  @extend %relative;
+  width: 100%;
+  height: auto;
+  padding: 183px 15px 93px;
+  background: url('/images/coffee_image.jpg') center center / cover no-repeat;
+
+  &::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e1e1e -6.88%, rgba(0, 0, 0, 0) 87.45%);
+  }
+
+  &__container {
+    @extend %relative;
+    z-index: 1;
+    color: var(--white);
+  }
+
+  &__caption {
+    font-family: var(--font-family-cursive);
+    font-size: clamp(45px, 17vw, 220px);
+    line-height: 1.3;
+    font-weight: 400;
+  }
+
+  &__title {
+    @include fontHeight(22, 1.2, 500);
+  }
+
+  &__text {
+    @include fontHeight(20, 1.7, 400);
+    max-width: 558px;
+  }
+
+  &__button {
+    @include fontHeight(16, 1.2, 700);
+    margin-top: 20px;
+  }
+}

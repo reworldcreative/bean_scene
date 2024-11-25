@@ -1,0 +1,45 @@
+%flex {
+  display: flex;
+}
+
+%flex-aic {
+  @extend %flex;
+  align-items: center;
+}
+
+%flex-center {
+  @extend %flex-aic;
+  justify-content: center;
+}
+
+%flex-between {
+  justify-content: space-between;
+}
+
+%flex-column {
+  flex-direction: column;
+}
+
+%grid {
+  display: grid;
+}
+
+%grid-aic {
+  align-items: center;
+  display: grid;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%relative {
+  position: relative;
+}
+
+%absolute-center {
+  @extend %absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

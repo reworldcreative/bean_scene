@@ -1,0 +1,18 @@
+.button {
+  padding: 14px 27px;
+  border-radius: 24px;
+  color: var(--black);
+  background: var(--secondary);
+  box-shadow: var(--buttons-shadow);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--white);
+      background: var(--primary);
+    }
+  }
+
+  &.r-16 {
+    border-radius: 16px;
+  }
+}

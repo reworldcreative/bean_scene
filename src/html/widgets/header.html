@@ -1,0 +1,56 @@
+<header class='header'>
+  <div class='header__container container'>
+    <a href='/' class='header__logo'>
+      Bean Scene
+    </a>
+
+    <nav class='header__nav' data-scroll-lock-scrollable>
+      <ul class='header__list'>
+        <li class='header__item'>
+          <a href="#">Home</a>
+        </li>
+        <li class='header__item'>
+          <a href="#">Menu</a>
+        </li>
+        <li class='header__item'>
+          <a href="#">About Us</a>
+        </li>
+        <li class='header__item'>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <div class='header__authorization'>
+        <button type='button' class='header__button button'>Sign In</button>
+        <button type='button' class='header__button button'>Sing Up</button>
+      </div>
+
+      <ul class='header__socials socials'>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='facebook' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='instagram' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='youtube' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='twitter' width='24' height='24'}}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type='button' class='header__burger burger'>
+      <span class='burger__line'></span>
+    </button>
+  </div>
+</header>

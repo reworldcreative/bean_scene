@@ -1,0 +1,41 @@
+$breakpoints: (
+  xxs: 350px,
+  // Double Extra small devices (mobile)
+  xs: 375px,
+  // Extra small devices (mobile)
+  sm: 576px,
+  // Small devices (mobile)
+  md: 768px,
+  // Medium devices (tablet)
+  lg: 1024px,
+  // Large devices (desktop)
+  xl: 1220px,
+  // Extra large devices (larger desktop)
+  lx: 1440px,
+  // Large medium devices (medium desktop)
+  ultra: 1920px // Ultra large devices,
+);
+
+@mixin media-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin media-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
