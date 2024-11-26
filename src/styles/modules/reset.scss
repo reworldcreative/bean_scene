@@ -1,14 +1,14 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   border: 0;
 }
 
 *,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -19,9 +19,9 @@
 
 a,
 a:visited {
-  transition: all 0.2s;
   text-decoration: none;
   font-style: normal;
+  transition: all 0.2s;
 }
 
 a,
@@ -40,8 +40,8 @@ aside {
 input,
 button,
 textarea {
-  background: transparent;
   font-family: inherit;
+  background: transparent;
 }
 
 input::-ms-clear {
@@ -50,20 +50,20 @@ input::-ms-clear {
 
 input[type='number']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none; // Yeah, yeah everybody write about it
+  appearance: none; // Yeah, yeah everybody write about it
 }
 
 input[type='number'],
 input[type='number']:hover,
 input[type='number']:focus {
+  appearance: textfield;
   appearance: none;
-  -moz-appearance: textfield;
 }
 
 button {
   cursor: pointer;
-  transition: all 0.2s;
   line-height: 1;
+  transition: all 0.2s;
 }
 
 button::-moz-focus-inner {
@@ -104,17 +104,18 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
-  font-optical-sizing: auto;
-  background: var(--background);
-  color: var(--black);
-  height: 100%;
   width: 100%;
-  font-weight: 400;
-  line-height: 1;
+  height: 100%;
+  font-family: var(--font-family);
   font-size: 16px;
-  letter-spacing: 0.5px;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--black);
+  background: var(--background);
+  font-optical-sizing: auto;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }

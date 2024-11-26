@@ -6,7 +6,7 @@
 @import '@/styles/modules/buttons';
 
 .container {
-  max-width: 1180px;
+  max-width: 1210px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -28,8 +28,20 @@
   //  visibility: hidden;
 }
 
+.section {
+  margin-top: clamp(15px, 10vw, 82px);
+}
+
 .title {
   @include fontHeight(54, 1.2, 700);
+  color: var(--primary);
+}
+
+.text {
+  @include fontHeight(20, 1.7, 400);
+  font-size: clamp(16px, 3vw, 20px);
+  line-height: 1.7;
+  color: var(--main);
 }
 
 a {

@@ -1,0 +1,22 @@
+<picture>
+    {{#if webpSrc}}
+    <source type="image/webp" srcset="{{webpSrc}}" media="(min-width: 1920px)">
+    {{/if}}
+
+    {{#if mediumSrc}}
+    <source type="image/webp" srcset="{{mediumSrc ? webpMediumSrc : webpSrc}}"
+        media="(min-width: 500px) and (max-width: 1920px)">
+    {{/if}}
+
+    {{#if smallSrc}}
+    <source type="image/webp" srcset="{{smallSrc ? webpSmallSrc : webpSrc}}" media="(max-width: 500px)">
+    {{/if}}
+
+    <source type="image/webp" srcset="{{webpSrc}}">
+
+    <img src="{{src}}" alt="{{alt}}"
+    {{#if className}} class="{{className}}"{{/if}}
+    {{#if width}} width="{{width}}"{{/if}}
+    {{#if height}} height="{{height}}"{{/if}}
+    loading="lazy">
+</picture>

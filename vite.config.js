@@ -9,8 +9,9 @@ import viteImagemin from '@vheemstra/vite-plugin-imagemin'
 import FullReload from 'vite-plugin-full-reload'
 import imageminWebp from 'imagemin-webp'
 import imageminOptipng from 'imagemin-optipng'
-import { ViteFaviconsPlugin } from 'vite-plugin-favicon'
+import imageminSvgo from 'imagemin-svgo'
 import imageminJpegRecompress from 'imagemin-jpeg-recompress'
+import { ViteFaviconsPlugin } from 'vite-plugin-favicon'
 import handlebars from 'vite-plugin-handlebars'
 import postcssCombine from 'postcss-combine-media-query'
 import sortMediaQueries from 'postcss-sort-media-queries'
@@ -64,6 +65,31 @@ export default defineConfig(({ command, mode }) => {
           }),
           png: imageminOptipng({
             optimizationLevel: 5,
+          }),
+          svg: imageminSvgo({
+            plugins: [
+              { name: 'removeViewBox', active: false },
+              { name: 'removeMetadata', active: true },
+              { name: 'removeComments', active: true },
+              { name: 'removeTitle', active: true },
+              { name: 'removeDoctype', active: true },
+              { name: 'removeXMLProcInst', active: true },
+              { name: 'removeUnusedNS', active: true },
+              { name: 'removeEditorsNSData', active: true },
+              { name: 'removeEmptyAttrs', active: true },
+              { name: 'removeEmptyText', active: true },
+              { name: 'removeEmptyContainers', active: true },
+              { name: 'convertColors', params: { shorthex: true } },
+              { name: 'convertStyleToAttrs', active: true },
+              { name: 'convertPathData', active: true },
+              { name: 'convertTransform', active: true },
+              { name: 'removeUnknownsAndDefaults', active: true },
+              { name: 'removeNonInheritableGroupAttrs', active: true },
+              { name: 'collapseGroups', active: true },
+              { name: 'mergePaths', active: true },
+              { name: 'removeDesc', params: { removeAny: false } },
+              { name: 'removeDimensions', active: true },
+            ],
           }),
         },
         makeWebp: {
