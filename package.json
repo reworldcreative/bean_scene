@@ -10,7 +10,8 @@
     "build-favicons": "vite build --mode favicons"
   },
   "dependencies": {
-    "rfs": "^10.0.0"
+    "rfs": "^10.0.0",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

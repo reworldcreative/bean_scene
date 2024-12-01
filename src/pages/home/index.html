@@ -15,53 +15,10 @@
   {{> widgets/header}}
 
   <main>
-    <section class='hero'>
-      <div class='container hero__container'>
-        <p class='hero__title'>We’ve got your morning covered with</p>
 
-        <h1 class="hero__caption">Coffee</h1>
-
-        <p class='text hero__text'>
-          It is best to start your day with a cup of coffee. Discover the
-          best flavours coffee you will ever have. We provide the best
-          for our customers.
-        </p>
-
-        <button type='button' class='button hero__button'>Order Now</button>
-      </div>
-    </section>
-
-    <section class='container section discover-section'>
-      <div class="discover-section__container">
-        <h2 class='title'>Discover the best coffee</h2>
-
-        <p class='text discover-section__text'>
-          Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and
-          helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no
-          doubt that you will enjoy this coffee more than others you have ever tasted.
-        </p>
-
-        <button type='button' class='button discover-section__button'>Learn More</button>
-      </div>
-
-      <div class='image-wrapper'>
-        {{> modules/picture
-        src="/images/coffee-cup.png"
-        alt="coffee"
-        className='discover-section__image'
-        width=300
-        height=300}}
-      </div>
-
-      <div class="image-wrapper">
-        {{> modules/picture
-        src="/images/coffee-blast.png"
-        alt="coffee blast"
-        className='discover-section__blast'
-        width=300
-        height=300}}
-      </div>
-    </section>
+    {{> partials-pages/home/hero-section}}
+    {{> partials-pages/home/discover-section}}
+    {{> partials-pages/home/novelties-section}}
 
   </main>
 

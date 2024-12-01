@@ -7,6 +7,8 @@ import pluginJs from '@eslint/js'
 import tsPlugin from '@typescript-eslint/eslint-plugin'
 
 export default [
+  { ignores: ['dist', 'eslint.config.js', 'vite.config.js'] },
+
   // TS config
   {
     files: ['**/*.ts', '**/*.tsx'],
@@ -123,9 +125,14 @@ export default [
           selector: 'typeLike',
           format: ['PascalCase'],
         },
+        {
+          selector: 'objectLiteralProperty',
+          format: null,
+        },
       ],
     },
   },
+
   // JS config
   {
     languageOptions: { globals: globals.browser },

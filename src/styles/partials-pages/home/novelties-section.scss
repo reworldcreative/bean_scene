@@ -1,0 +1,18 @@
+.novelties-section {
+  &__container {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 18px 0 0;
+  }
+
+  &__list {
+    max-width: fit-content;
+    margin: 32px 0 0;
+  }
+
+  .slider-novelties {
+    padding: 0 0 25px;
+  }
+}

@@ -14,7 +14,7 @@
 
     <source type="image/webp" srcset="{{webpSrc}}">
 
-    <img src="{{src}}" alt="{{alt}}"
+    <img src="{{src}}" alt="{{alt}}" aria-hidden="{{#if isHidden}}true{{else}}false{{/if}}"
     {{#if className}} class="{{className}}"{{/if}}
     {{#if width}} width="{{width}}"{{/if}}
     {{#if height}} height="{{height}}"{{/if}}
