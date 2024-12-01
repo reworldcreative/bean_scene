@@ -25,7 +25,6 @@
   white-space: nowrap;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
-  //  visibility: hidden;
 }
 
 .section {
@@ -35,6 +34,14 @@
 .title {
   @include fontHeight(54, 1.3, 700);
   color: var(--primary);
+
+  @include media-down(xl) {
+    font-size: max(36px, min(9vw, 54px));
+  }
+
+  @include media-down(md) {
+    line-height: 1;
+  }
 }
 
 .text {

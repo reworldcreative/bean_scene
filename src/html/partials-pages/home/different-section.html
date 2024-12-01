@@ -1,0 +1,63 @@
+<section class="section different-section">
+  <div class="container different-section__container">
+    <h2 class='title'>Why are we different?</h2>
+
+    <p class='text different-section__text'>
+      We don’t just make your coffee, we make your day!
+    </p>
+
+    <ul class='different-section__list'>
+      <li class='different-section__item'>
+        {{> widgets/different-card
+        title='Supreme Beans'
+        description='Beans that provides great taste'
+        imageId='coffee-beans'
+        }}
+      </li>
+
+      <li class='different-section__item'>
+        {{> widgets/different-card
+        title='High Quality'
+        description='We provide the highest quality'
+        imageId='badge'
+        }}
+      </li>
+
+      <li class='different-section__item'>
+        {{> widgets/different-card
+        title='Extraordinary'
+        description='Coffee like you have never tasted'
+        imageId='cup'
+        }}
+      </li>
+
+      <li class='different-section__item'>
+        {{> widgets/different-card
+        title='Affordable Price'
+        description='Our Coffee prices are easy to afford'
+        imageId='coin'
+        }}
+      </li>
+    </ul>
+
+    <div class='different-section__more'>
+      <p class='text'>
+        Great ideas start with great coffee, Lets help you achieve that
+      </p>
+
+      <h4 class='different-section__more-title'>Get started today.</h4>
+
+      <button type='button' class='button'>Join Us</button>
+    </div>
+  </div>
+
+  <div class="different-section__blast">
+    {{> modules/picture
+    src="/images/coffee-blast.webp"
+    alt="coffee blast"
+    isHidden=true
+    className='image'
+    width=300
+    height=300}}
+  </div>
+</section>

@@ -1,19 +1,12 @@
 $breakpoints: (
   xxs: 350px,
-  // Double Extra small devices (mobile)
   xs: 375px,
-  // Extra small devices (mobile)
   sm: 576px,
-  // Small devices (mobile)
   md: 768px,
-  // Medium devices (tablet)
   lg: 1024px,
-  // Large devices (desktop)
   xl: 1220px,
-  // Extra large devices (larger desktop)
   lx: 1440px,
-  // Large medium devices (medium desktop)
-  ultra: 1920px // Ultra large devices,
+  ultra: 1920px,
 );
 
 @mixin media-up($breakpoint) {

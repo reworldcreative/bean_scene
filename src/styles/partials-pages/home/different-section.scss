@@ -1,0 +1,70 @@
+.different-section {
+  @extend %relative;
+  overflow-x: clip;
+  text-align: center;
+
+  &__text {
+    margin: 16px 0 0;
+  }
+
+  &__list {
+    @extend %grid-aic;
+    align-items: stretch;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 280px));
+    gap: 20px;
+    margin: 32px 0 0;
+
+    @include media-down(lg) {
+      grid-template-columns: repeat(2, minmax(180px, 300px));
+    }
+
+    @include media-down(sm) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__more {
+    margin: 32px 0 0;
+
+    .button {
+      width: 135px;
+    }
+  }
+
+  &__more-title {
+    @include fontHeight(30, 1.3, 700);
+    margin: 0 0 24px;
+    color: var(--primary);
+  }
+
+  &__blast {
+    @extend %absolute;
+    top: max(-125px, min(-10vw, -70px));
+    right: clamp(-116px, -10vw, -200px);
+    z-index: -1;
+    width: 498px;
+    max-width: 100vw;
+    height: clamp(250px, 50vw, 272px);
+    transform: rotateY(180deg);
+
+    @include media-down(xl) {
+      top: auto;
+      bottom: 20vw;
+    }
+
+    @include media-down(lg) {
+      bottom: 40vw;
+    }
+
+    @include media-down(sm) {
+      display: none;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

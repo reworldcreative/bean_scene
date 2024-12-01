@@ -1,0 +1,48 @@
+.different-card {
+  @extend %relative;
+  width: 100%;
+  height: 100%;
+  padding: 36px 25px;
+  outline: 1px solid var(--card-border);
+  background: var(--card-bg);
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--accent);
+    }
+  }
+
+  @include media-down(md) {
+    padding: 15px;
+  }
+
+  &__img {
+    margin: 0 auto 25px;
+
+    @include media-down(md) {
+      margin: 0 auto 15px;
+    }
+
+    svg {
+      width: clamp(60px, 10vw, 88px);
+      height: clamp(60px, 10vw, 88px);
+    }
+  }
+
+  &__title {
+    @include fontHeight(28, 1.3, 700);
+    margin: 0 0 8px;
+    color: var(--primary);
+  }
+
+  &__description {
+    @include fontHeight(20, 1.3, 400);
+    max-width: 88%;
+    margin: 0 auto;
+    color: var(--main);
+
+    @include media-down(md) {
+      max-width: 100%;
+    }
+  }
+}

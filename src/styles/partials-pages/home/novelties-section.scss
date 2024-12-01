@@ -1,6 +1,14 @@
 .novelties-section {
+  @include media-down(lg) {
+    padding: 0;
+  }
+
   &__container {
     text-align: center;
+
+    @include media-down(lg) {
+      padding: 0 15px;
+    }
   }
 
   &__text {
@@ -10,9 +18,12 @@
   &__list {
     max-width: fit-content;
     margin: 32px 0 0;
+    padding: 0 0 25px;
   }
 
   .slider-novelties {
-    padding: 0 0 25px;
+    @include media-down(lg) {
+      padding: 0 15px;
+    }
   }
 }
