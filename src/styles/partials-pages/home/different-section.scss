@@ -49,6 +49,15 @@
     height: clamp(250px, 50vw, 272px);
     transform: rotateY(180deg);
 
+    @include media-up(ultra) {
+      left: 63vw;
+    }
+
+    @include media-up(lx) {
+      right: auto;
+      left: 70vw;
+    }
+
     @include media-down(xl) {
       top: auto;
       bottom: 20vw;
