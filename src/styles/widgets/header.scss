@@ -76,6 +76,7 @@
 
       &:first-child {
         margin-right: 8px;
+        text-decoration: underline;
 
         @media (hover: hover) {
           &:hover {

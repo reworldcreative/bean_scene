@@ -1,11 +1,123 @@
-<section class="section feedback-section">
-  <div class='feedback-section__wrapper'>
-    <div class='container feedback-section__container'>
-      <div class='feedback-section__block'>
-        <h2 class='title'>Our coffee perfection feedback</h2>
+<section class="feedback-section">
+  <div class='section feedback-section__wrapper'>
+    <div class='container feedback-section__block'>
+      <h2 class='title'>Our coffee perfection feedback</h2>
 
-        <p class='text feedback-section__text'>Our customers has amazing things to say about us</p>
+      <p class='text feedback-section__text'>Our customers has amazing things to say about us</p>
+    </div>
+
+    <div class='container feedback-section__slider-container'>
+      <div class='swiper slider-feedback container feedback-section__container'>
+        <div class="swiper-wrapper">
+          <article class='swiper-slide feedback-section__item'>
+            <p class='text feedback-section__description'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+              to
+              make
+              a type specimen book. It has survived not only five centuries, but also the leap into electronic
+              typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset Lorem
+              Ipsum
+              is
+              simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+              to
+              make
+              a type specimen book. It has survived not only five centuries, but also the leap into electronic
+              typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            </p>
+
+            <h4 class='feedback-section__author'>
+              Jonny Thomas
+            </h4>
+
+            <p class='text feedback-section__position'>
+              Project Manager
+            </p>
+
+            <div class='feedback-section__avatar'>
+              {{> modules/picture
+              src="/images/feedback/author1.webp"
+              alt="feedback author"
+              className='image'
+              width=112
+              height=112}}
+            </div>
+          </article>
+
+          <article class='swiper-slide feedback-section__item'>
+            <p class='text feedback-section__description'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+              to
+              make
+              a type specimen book. It has survived not only five centuries, but also the leap into electronic
+              typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset Lorem
+              Ipsum
+              is
+              simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+              to
+              make
+              a type specimen book. It has survived not only five centuries, but also the leap into electronic
+              typesetting,
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            </p>
+
+            <h4 class='feedback-section__author'>
+              Jonny Thomas
+            </h4>
+
+            <p class='text feedback-section__position'>
+              Project Manager
+            </p>
+
+            <div class='feedback-section__avatar'>
+              {{> modules/picture
+              src="/images/feedback/author1.webp"
+              alt="feedback author"
+              className='image'
+              width=112
+              height=112}}
+            </div>
+          </article>
+        </div>
       </div>
+
+      <div class='swiper-navigation'>
+        <button type='button' class="button r-16 swiper-button-prev" aria-label='next feedback'>
+          {{> modules/svg id='arrow' width='24' height='24'}}
+        </button>
+
+        <button type='button' class="button r-16 swiper-button-next" aria-label='prev feedback'>
+          {{> modules/svg id='arrow' width='24' height='24'}}
+        </button>
+      </div>
+    </div>
+
+    <div class='feedback-section__blast-left'>
+      {{> modules/picture
+      src="/images/coffee-blast.webp"
+      alt="coffee"
+      isHidden=true
+      className='image'
+      width=414
+      height=226}}
+    </div>
+
+    <div class='feedback-section__blast-right'>
+      {{> modules/picture
+      src="/images/coffee-blast.webp"
+      alt="coffee"
+      isHidden=true
+      className='image'
+      width=498
+      height=272}}
     </div>
   </div>
 </section>
