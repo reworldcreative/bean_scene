@@ -8,6 +8,7 @@
   }
 
   .slider-feedback {
+    min-height: 200px;
     padding: 1px 10px 56px;
 
     @include media-down(sm) {

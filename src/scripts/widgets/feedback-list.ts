@@ -11,22 +11,15 @@ interface FeedbackItem {
 const API_URL = 'https://retoolapi.dev/9u3YqT/data?_limit=10'
 let data: FeedbackItem[] = dataBackup
 
-async function fetchData(): Promise<void> {
-  try {
-    const response = await fetch(API_URL)
-    if (!response.ok) {
-      throw new Error(`HTTP помилка! Статус: ${response.status}`)
-    }
-    data = (await response.json()) as FeedbackItem[]
-  } catch (error) {
-    console.error('Error:', error)
-  }
-}
-
 export const feedbackList = async (): Promise<void> => {
   const listElement = document.getElementById('feedbackList')
   if (!listElement) return
-  await fetchData()
+
+  const response = await fetch(API_URL)
+  if (!response.ok) {
+    return
+  }
+  data = (await response.json()) as FeedbackItem[]
 
   data.forEach(item => {
     const HTML = `

@@ -7,7 +7,9 @@ import { swiper } from '@/scripts/widgets/novelties-slider'
 document.addEventListener('DOMContentLoaded', () => {
   burger()
   noveltiesList()
-  feedbackList()
+  feedbackList().catch(error => {
+    console.error(error)
+  })
   swiper
   feedbackSwiper
 })
