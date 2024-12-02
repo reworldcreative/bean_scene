@@ -1,3 +1,132 @@
 <footer class="footer">
+  <div class='container footer__container'>
+    <div class='footer__main-content'>
+      <a href='/' class='footer__logo'>
+        Bean Scene
+      </a>
 
+      <p class='footer__text'>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.
+      </p>
+
+      <ul class='socials footer__socials'>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='facebook' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='instagram' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='youtube' width='24' height='24'}}
+          </a>
+        </li>
+        <li class='socials__item'>
+          <a rel="noopener noreferrer" href="#" target='_blank' class='socials__link'>
+            {{> modules/svg id='twitter' width='24' height='24'}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class='footer__links'>
+      <section class='footer__section'>
+        <h3 class='footer__title'>
+          About
+        </h3>
+
+        <ul class='footer__list'>
+          <li>
+            <a href="#" class='footer__link'>Menu</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>Features</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>News & Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>Help & Supports</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class='footer__section'>
+        <h3 class='footer__title'>
+          Company
+        </h3>
+
+        <ul class='footer__list'>
+          <li>
+            <a href="#" class='footer__link'>How we work</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>Terms of service</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>Pricing</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>FAQ</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class='footer__section'>
+        <h3 class='footer__title'>
+          Contact Us
+        </h3>
+
+        <ul class='footer__list'>
+          <li class='footer__address'>
+            Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore-560016
+          </li>
+
+          <li>
+            <a href="tel:+12029182132" class='footer__link'>+1 202-918-2132</a>
+          </li>
+
+          <li>
+            <a href="mailto:" class='footer__link'>beanscene@mail.com</a>
+          </li>
+
+          <li>
+            <a href="#" class='footer__link'>www.beanscene.com</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="footer__left-cup">
+    {{> modules/picture
+    src="/images/footer-cup.webp"
+    alt="coffee cup"
+    isHidden=true
+    className='image'
+    width=444
+    height=358}}
+  </div>
+
+  <div class="footer__right-cup">
+    {{> modules/picture
+    src="/images/footer-cup.webp"
+    alt="coffee cup"
+    isHidden=true
+    className='image'
+    width=444
+    height=358}}
+  </div>
 </footer>

@@ -1,2 +1,146 @@
 .footer {
+  @extend %relative;
+  overflow-x: clip;
+  color: var(--white);
+  background: var(--footer-bg);
+
+  &::after {
+    @extend %absolute;
+    content: url('/images/footer-image.webp');
+    opacity: 0.8;
+    pointer-events: none;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    mix-blend-mode: overlay;
+  }
+
+  &__container {
+    @extend %relative;
+    @extend %flex;
+    justify-content: space-between;
+    z-index: 2;
+    gap: 14px;
+    padding: clamp(50px, 12vw, 162px) 15px 72px;
+
+    @include media-down(lg) {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 50px;
+    }
+  }
+
+  &__main-content {
+    display: grid;
+    gap: 20px;
+    max-width: 380px;
+
+    @include media-down(lg) {
+      max-width: 60vw;
+    }
+
+    @include media-down(md) {
+      max-width: 100%;
+    }
+  }
+
+  &__logo {
+    @include fontHeight(54, 1.3, 400);
+    font-family: var(--font-family-cursive);
+    letter-spacing: -0.1px;
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  &__text {
+    @include fontHeight(14, 1.57, 400);
+  }
+
+  &__socials {
+    @extend %flex-aic;
+    margin: 14px 0 0;
+
+    .socials__item {
+      margin-right: 20px;
+    }
+  }
+
+  &__left-cup {
+    @extend %absolute;
+    top: -236px;
+    right: -158px;
+    z-index: 0;
+    width: 444px;
+    max-width: 100vw;
+    transform: rotateY(180deg);
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__right-cup {
+    @extend %absolute;
+    top: -236px;
+    left: -147px;
+    z-index: 0;
+    width: 444px;
+    max-width: 100vw;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__links {
+    @extend %flex;
+    justify-content: space-between;
+    gap: 30px 20px;
+    width: clamp(500px, 60vw, 735px);
+
+    @include media-down(lg) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include fontHeight(26, 1.3, 700);
+    color: var(--white);
+  }
+
+  &__list {
+    @extend %grid;
+    gap: 26px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+  }
+
+  &__link {
+    @media (hover: hover) {
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  &__address {
+    line-height: 1.3;
+  }
+
+  &__section {
+    max-width: 330px;
+
+    @include media-down(md) {
+      flex: auto;
+      max-width: 100%;
+    }
+  }
 }

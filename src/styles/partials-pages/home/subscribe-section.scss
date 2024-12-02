@@ -17,6 +17,8 @@
   }
 
   &__container {
+    @extend %relative;
+    z-index: 2;
     padding: clamp(40px, 10vw, 80px) 15px;
     text-align: center;
   }

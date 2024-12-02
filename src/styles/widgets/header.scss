@@ -4,7 +4,6 @@
   width: 100%;
   padding: 21px 0 5px;
   color: var(--white);
-  // background: var(--black-10);
 
   &__container,
   &__list,
@@ -64,7 +63,7 @@
   &__logo {
     @media (hover: hover) {
       &:hover {
-        color: var(--accent);
+        color: var(--secondary);
       }
     }
   }
@@ -141,6 +140,8 @@
   }
 
   &__socials {
+    display: none;
+
     @include media-down(md) {
       align-self: flex-end;
       display: flex;
@@ -194,8 +195,6 @@
 }
 
 .socials {
-  display: none;
-
   @include media-down(md) {
     align-items: center;
     display: flex;
