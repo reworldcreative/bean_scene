@@ -1,0 +1,87 @@
+.subscribe-section {
+  @extend %relative;
+  margin-top: 30px;
+  background: url('/images/coffee-banner.webp') center center / cover no-repeat;
+
+  &__title,
+  &__text {
+    color: var(--white);
+  }
+
+  &__title {
+    margin: 0 0 16px;
+  }
+
+  &__text {
+    margin: 0 0 26px;
+  }
+
+  &__container {
+    padding: clamp(40px, 10vw, 80px) 15px;
+    text-align: center;
+  }
+
+  &__form {
+    width: 54.2%;
+    margin: auto;
+
+    @include media-down(lg) {
+      width: 80%;
+    }
+
+    @include media-down(md) {
+      width: 100%;
+    }
+  }
+
+  &__input-container,
+  &__input,
+  &__button {
+    border-radius: 4px;
+  }
+
+  &__input-container {
+    @extend %flex-aic;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--card-bg);
+
+    @include media-down(sm) {
+      display: block;
+      background: none;
+    }
+  }
+
+  &__input {
+    padding: 16px 26px;
+    color: var(--black);
+    background: var(--card-bg);
+
+    @include media-down(sm) {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      background: var(--card-bg);
+    }
+
+    &::placeholder {
+      color: var(--main);
+    }
+  }
+
+  &__button {
+    padding: 19px 24px;
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+
+    @include media-down(sm) {
+      width: 100%;
+      padding: 18px;
+      border-radius: 0 0 10px 10px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+  }
+}
