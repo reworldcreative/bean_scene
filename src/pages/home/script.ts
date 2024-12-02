@@ -1,11 +1,13 @@
 import { burger } from '@/scripts/modules/burger'
+import { feedbackList } from '@/scripts/widgets/feedback-list'
 import { feedbackSwiper } from '@/scripts/widgets/feedback-slidet'
-import { list } from '@/scripts/widgets/novelties-list'
+import { noveltiesList } from '@/scripts/widgets/novelties-list'
 import { swiper } from '@/scripts/widgets/novelties-slider'
 
 document.addEventListener('DOMContentLoaded', () => {
   burger()
-  list()
+  noveltiesList()
+  feedbackList()
   swiper
   feedbackSwiper
 })

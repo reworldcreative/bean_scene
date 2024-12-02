@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars'
 import data from '@/data/home/novelties.json'
 
-export const list = (): void => {
+export const noveltiesList = (): void => {
   const listElement = document.getElementById('noveltiesList')
   if (!listElement) return
 
